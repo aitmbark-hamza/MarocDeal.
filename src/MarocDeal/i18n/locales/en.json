@@ -70,7 +70,24 @@
     "welcomeBack": "Welcome back!",
     "accountCreated": "Your account has been created successfully",
     "loggedOut": "Logged Out",
-    "loggedOutSuccess": "You have been logged out successfully"
+    "loggedOutSuccess": "You have been logged out successfully",
+    "sendVerification": "Send Verification Code",
+    "sendingVerification": "Sending verification...",
+    "verifyIdentity": "Verify Your Identity",
+    "verificationCodeSent": "We've sent a verification code to",
+    "verificationCode": "Verification Code",
+    "verificationSent": "Verification Code Sent",
+    "checkEmail": "Please check your email for the verification code",
+    "verificationFailed": "Failed to send verification code",
+    "invalidCode": "Please enter a valid 6-digit code",
+    "verificationSuccess": "Identity Verified!",
+    "identityVerified": "Your identity has been successfully verified",
+    "wrongCode": "Invalid verification code. Please try again",
+    "verify": "Verify",
+    "verifying": "Verifying...",
+    "resendCode": "Resend verification code",
+    "redirecting": "Redirecting to your profile...",
+    "demoCode": "Demo code"
   },
   "categories": {
     "tv": "TV & Video",
@@ -149,11 +166,19 @@
   "footer": {
     "contact": "Contact Info",
     "followUs": "Follow Us",
-    "about": "About ElectroCompare",
+    "about": "About MarocDeals",
+    "features": "Why Choose Us",
     "address": "Casablanca, Morocco",
-    "description": "We compare prices from the best Moroccan electronics retailers to help you find the best deals.",
-    "copyright": "© {{year}} ElectroCompare. All Rights Reserved.",
-    "privacy": "We value your privacy and ensure secure browsing."
+    "description": "We compare prices from the best Moroccan retailers to help you find the best deals on everything you need.",
+    "copyright": "© {{year}} MarocDeals. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "stats": {
+      "users": "Happy Users",
+      "products": "Products",
+      "updates": "Updates",
+      "rating": "Rating"
+    }
   },
   "favorites": {
     "title": "My Favorites",
