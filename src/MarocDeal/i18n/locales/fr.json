@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "categories": "Catégories",
+    "search": "Recherche",
+    "favorites": "Favoris",
+    "admin": "Admin",
+    "language": "Langue"
+  },
+  "home": {
+    "title": "Trouvez les Meilleures Offres Électroniques au Maroc",
+    "subtitle": "Comparez les prix des meilleurs détaillants comme Jumia, Avito et plus",
+    "welcome": "Bienvenue sur ElectroCompare",
+    "description": "Découvrez les meilleures offres électroniques au Maroc. Nous garantissons que vos données sont 100% sécurisées, vous offrant une tranquillité d'esprit totale. Notre plateforme supporte plusieurs langues – Arabe, Français et Anglais – pour une expérience fluide et harmonieuse.",
+    "hero": {
+      "badge": "Plateforme de Comparaison de Prix Intelligente",
+      "title": "Comparez les Produits de",
+      "titleHighlight": "Plusieurs Plateformes",
+      "subtitle": "Trouvez les meilleures offres sur Avito, Jumia et Marjan en un seul endroit. Économisez du temps et de l'argent avec notre moteur de comparaison intelligent.",
+      "stats": {
+        "products": "10K+ Produits",
+        "realtime": "Prix en Temps Réel",
+        "deals": "Meilleures Offres"
+      },
+      "cta": {
+        "primary": "Commencer à Comparer",
+        "secondary": "Parcourir les Catégories"
+      }
+    },
+    "secure": {
+      "title": "Sécurisé et Fiable",
+      "description": "Vos données sont entièrement protégées."
+    },
+    "multilang": {
+      "title": "Support Multi-Langues",
+      "description": "Naviguez facilement en AR/FR/EN."
+    },
+    "userFriendly": {
+      "title": "Convivial",
+      "description": "Design intuitif pour une expérience fluide."
+    },
+    "searchPlaceholder": "Rechercher des produits...",
+    "searchButton": "Rechercher",
+    "topCategories": "Catégories Principales",
+    "featuredProducts": "Produits en Vedette",
+    "viewAll": "Voir Tout"
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "createAccount": "Créer un Compte",
+    "logout": "Déconnexion",
+    "email": "Email",
+    "password": "Mot de passe",
+    "username": "Nom d'utilisateur",
+    "emailPlaceholder": "Entrez votre email",
+    "passwordPlaceholder": "Entrez votre mot de passe",
+    "usernamePlaceholder": "Entrez votre nom d'utilisateur",
+    "loginWithEmail": "Se connecter avec Email",
+    "loginWithFacebook": "Se connecter avec Facebook",
+    "or": "ou",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "createOne": "Créez-en un",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "loginDescription": "Connectez-vous à votre compte pour continuer",
+    "signupDescription": "Créez un nouveau compte pour commencer",
+    "fillAllFields": "Veuillez remplir tous les champs",
+    "loginSuccess": "Connexion Réussie",
+    "signupSuccess": "Compte Créé",
+    "welcomeBack": "Content de vous revoir !",
+    "accountCreated": "Votre compte a été créé avec succès",
+    "loggedOut": "Déconnecté",
+    "loggedOutSuccess": "Vous avez été déconnecté avec succès"
+  },
+  "categories": {
+    "tv": "TV & Vidéo",
+    "pc": "Ordinateurs",
+    "laptops": "Portables",
+    "mobile": "Téléphones",
+    "audio": "Audio & Casques",
+    "accessories": "Accessoires",
+    "gaming": "Gaming"
+  },
+  "product": {
+    "price": "Prix",
+    "brand": "Marque",
+    "condition": "État",
+    "location": "Lieu",
+    "seller": "Vendeur",
+    "description": "Description",
+    "specifications": "Spécifications",
+    "priceHistory": "Historique des Prix",
+    "availability": "Disponibilité",
+    "viewOnSite": "Voir sur {{site}}",
+    "comparePrice": "Comparer le Prix",
+    "new": "Neuf",
+    "used": "Occasion",
+    "available": "Disponible",
+    "outOfStock": "Rupture de Stock"
+  },
+  "search": {
+    "results": "Résultats de Recherche",
+    "noResults": "Aucun produit trouvé",
+    "filters": "Filtres",
+    "minPrice": "Prix Min",
+    "maxPrice": "Prix Max",
+    "city": "Ville",
+    "category": "Catégorie",
+    "applyFilters": "Appliquer les Filtres",
+    "clearFilters": "Effacer les Filtres",
+    "sortBy": "Trier par",
+    "sortPriceLow": "Prix: Croissant",
+    "sortPriceHigh": "Prix: Décroissant",
+    "sortNewest": "Plus Récent"
+  },
+  "admin": {
+    "dashboard": "Tableau de Bord Admin",
+    "triggerScraping": "Lancer le Scraping",
+    "manageProducts": "Gérer les Produits",
+    "viewStats": "Voir les Statistiques",
+    "scrapingStarted": "Processus de scraping lancé",
+    "lastUpdate": "Dernière Mise à Jour"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "retry": "Réessayer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "darkMode": "Mode Sombre",
+    "lightMode": "Mode Clair"
+  },
+  "cities": {
+    "casablanca": "Casablanca",
+    "rabat": "Rabat",
+    "marrakech": "Marrakech",
+    "fes": "Fès",
+    "tangier": "Tanger",
+    "agadir": "Agadir",
+    "meknes": "Meknès",
+    "oujda": "Oujda",
+    "kenitra": "Kénitra",
+    "tetouan": "Tétouan"
+  },
+  "footer": {
+    "contact": "Informations de Contact",
+    "followUs": "Suivez-nous",
+    "about": "À propos d'ElectroCompare",
+    "address": "Casablanca, Maroc",
+    "description": "Nous comparons les prix des meilleurs détaillants d'électronique marocains pour vous aider à trouver les meilleures offres.",
+    "copyright": "© {{year}} ElectroCompare. Tous droits réservés.",
+    "privacy": "Nous respectons votre vie privée et garantissons une navigation sécurisée."
+  },
+  "favorites": {
+    "title": "Mes Favoris",
+    "empty": "Vous n'avez pas encore ajouté de produits à vos favoris.",
+    "startShopping": "Commencer les Achats",
+    "count": "{{count}} articles"
+  },
+  "reviews": {
+    "title": "Avis des Utilisateurs",
+    "submitReview": "Soumettre l'Avis",
+    "writeReview": "Écrivez votre avis",
+    "rating": "Note",
+    "comment": "Commentaire",
+    "commentPlaceholder": "Partagez votre expérience avec la plateforme...",
+    "requireAuth": "Veuillez vous connecter pour soumettre un avis",
+    "loginToReview": "Se connecter",
+    "signupToReview": "S'inscrire",
+    "reviewSubmitted": "Avis Soumis",
+    "reviewThankYou": "Merci pour votre avis !",
+    "demoRate": "Ajouter un Avis Démo",
+    "submitting": "Envoi en cours...",
+    "noReviews": "Aucun avis pour le moment",
+    "beFirst": "Soyez le premier à évaluer notre plateforme !"
+  }
+}

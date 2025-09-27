@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "search": "Search",
+    "favorites": "Favorites",
+    "admin": "Admin",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Find the Best Electronics Deals in Morocco",
+    "subtitle": "Compare prices from top retailers like Jumia, Avito and more",
+    "welcome": "Welcome to ElectroCompare",
+    "description": "Discover the best electronics deals in Morocco. We ensure your data is 100% secure, giving you full peace of mind. Our platform supports multiple languages – Arabic, French, and English – for a smooth and seamless experience.",
+    "hero": {
+      "badge": "Smart Price Comparison Platform",
+      "title": "Compare Products from",
+      "titleHighlight": "Multiple Platforms",
+      "subtitle": "Find the best deals across Avito, Jumia, and Marjan in one place. Save time and money with our intelligent comparison engine.",
+      "stats": {
+        "products": "10K+ Products",
+        "realtime": "Real-time Prices", 
+        "deals": "Best Deals"
+      },
+      "cta": {
+        "primary": "Start Comparing Now",
+        "secondary": "Browse Categories"
+      }
+    },
+    "secure": {
+      "title": "Secure & Reliable",
+      "description": "Your data is fully protected."
+    },
+    "multilang": {
+      "title": "Multi-Language Support",
+      "description": "Navigate effortlessly in AR/FR/EN."
+    },
+    "userFriendly": {
+      "title": "User-Friendly",
+      "description": "Intuitive design for a smooth experience."
+    },
+    "searchPlaceholder": "Search for products...",
+    "searchButton": "Search",
+    "topCategories": "Top Categories",
+    "featuredProducts": "Featured Products",
+    "viewAll": "View All"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "createAccount": "Create Account",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "usernamePlaceholder": "Enter your username",
+    "loginWithEmail": "Login with Email",
+    "loginWithFacebook": "Login with Facebook",
+    "or": "or",
+    "noAccount": "Don't have an account?",
+    "createOne": "Create one",
+    "haveAccount": "Already have an account?",
+    "loginDescription": "Sign in to your account to continue",
+    "signupDescription": "Create a new account to get started",
+    "fillAllFields": "Please fill in all fields",
+    "loginSuccess": "Login Successful",
+    "signupSuccess": "Account Created",
+    "welcomeBack": "Welcome back!",
+    "accountCreated": "Your account has been created successfully",
+    "loggedOut": "Logged Out",
+    "loggedOutSuccess": "You have been logged out successfully"
+  },
+  "categories": {
+    "tv": "TV & Video",
+    "pc": "Computers",
+    "laptops": "Laptops",
+    "mobile": "Mobile Phones",
+    "audio": "Audio & Headphones",
+    "accessories": "Accessories",
+    "gaming": "Gaming"
+  },
+  "product": {
+    "price": "Price",
+    "brand": "Brand",
+    "condition": "Condition",
+    "location": "Location",
+    "seller": "Seller",
+    "description": "Description",
+    "specifications": "Specifications",
+    "priceHistory": "Price History",
+    "availability": "Availability",
+    "viewOnSite": "View on {{site}}",
+    "comparePrice": "Compare Price",
+    "new": "New",
+    "used": "Used",
+    "available": "Available",
+    "outOfStock": "Out of Stock"
+  },
+  "search": {
+    "results": "Search Results",
+    "noResults": "No products found",
+    "filters": "Filters",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "city": "City",
+    "category": "Category",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters",
+    "sortBy": "Sort by",
+    "sortPriceLow": "Price: Low to High",
+    "sortPriceHigh": "Price: High to Low",
+    "sortNewest": "Newest First"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "triggerScraping": "Trigger Scraping",
+    "manageProducts": "Manage Products",
+    "viewStats": "View Statistics",
+    "scrapingStarted": "Scraping process started",
+    "lastUpdate": "Last Update"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
+  "cities": {
+    "casablanca": "Casablanca",
+    "rabat": "Rabat",
+    "marrakech": "Marrakech",
+    "fes": "Fes",
+    "tangier": "Tangier",
+    "agadir": "Agadir",
+    "meknes": "Meknes",
+    "oujda": "Oujda",
+    "kenitra": "Kenitra",
+    "tetouan": "Tetouan"
+  },
+  "footer": {
+    "contact": "Contact Info",
+    "followUs": "Follow Us",
+    "about": "About ElectroCompare",
+    "address": "Casablanca, Morocco",
+    "description": "We compare prices from the best Moroccan electronics retailers to help you find the best deals.",
+    "copyright": "© {{year}} ElectroCompare. All Rights Reserved.",
+    "privacy": "We value your privacy and ensure secure browsing."
+  },
+  "favorites": {
+    "title": "My Favorites",
+    "empty": "You haven't added any products to your favorites yet.",
+    "startShopping": "Start Shopping",
+    "count": "{{count}} items"
+  },
+  "reviews": {
+    "title": "User Reviews",
+    "submitReview": "Submit Review",
+    "writeReview": "Write your review",
+    "rating": "Rating",
+    "comment": "Comment",
+    "commentPlaceholder": "Share your experience with the platform...",
+    "requireAuth": "Please log in to submit a review",
+    "loginToReview": "Login",
+    "signupToReview": "Sign Up",
+    "reviewSubmitted": "Review Submitted",
+    "reviewThankYou": "Thank you for your review!",
+    "demoRate": "Add Demo Review",
+    "submitting": "Submitting...",
+    "noReviews": "No reviews yet",
+    "beFirst": "Be the first to review our platform!"
+  }
+}

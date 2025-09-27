@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "categories": "الفئات",
+    "search": "البحث",
+    "favorites": "المفضلة",
+    "admin": "الإدارة",
+    "language": "اللغة"
+  },
+  "home": {
+    "title": "اعثر على أفضل عروض الإلكترونيات في المغرب",
+    "subtitle": "قارن الأسعار من أفضل المتاجر مثل جوميا وأفيتو وغيرها",
+    "welcome": "مرحباً بك في ElectroCompare",
+    "description": "اكتشف أفضل عروض الإلكترونيات في المغرب. نحن نضمن أن بياناتك آمنة 100%، مما يمنحك راحة البال الكاملة. منصتنا تدعم عدة لغات – العربية والفرنسية والإنجليزية – لتجربة سلسة ومريحة.",
+    "hero": {
+      "badge": "منصة ذكية لمقارنة الأسعار",
+      "title": "قارن المنتجات من",
+      "titleHighlight": "منصات متعددة",
+      "subtitle": "اعثر على أفضل العروض عبر أفيتو وجوميا ومرجان في مكان واحد. وفر الوقت والمال مع محرك المقارنة الذكي لدينا.",
+      "stats": {
+        "products": "أكثر من 10 آلاف منتج",
+        "realtime": "أسعار فورية",
+        "deals": "أفضل العروض"
+      },
+      "cta": {
+        "primary": "ابدأ المقارنة الآن",
+        "secondary": "تصفح الفئات"
+      }
+    },
+    "secure": {
+      "title": "آمن وموثوق",
+      "description": "بياناتك محمية بالكامل."
+    },
+    "multilang": {
+      "title": "دعم متعدد اللغات",
+      "description": "تصفح بسهولة بالعربية/الفرنسية/الإنجليزية."
+    },
+    "userFriendly": {
+      "title": "سهل الاستخدام",
+      "description": "تصميم بديهي لتجربة سلسة."
+    },
+    "searchPlaceholder": "البحث عن المنتجات...",
+    "searchButton": "بحث",
+    "topCategories": "الفئات الرئيسية",
+    "featuredProducts": "المنتجات المميزة",
+    "viewAll": "عرض الكل"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "createAccount": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "username": "اسم المستخدم",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "usernamePlaceholder": "أدخل اسم المستخدم",
+    "loginWithEmail": "تسجيل الدخول بالبريد الإلكتروني",
+    "loginWithFacebook": "تسجيل الدخول بفيسبوك",
+    "or": "أو",
+    "noAccount": "ليس لديك حساب؟",
+    "createOne": "أنشئ واحدًا",
+    "haveAccount": "لديك حساب بالفعل؟",
+    "loginDescription": "سجل الدخول إلى حسابك للمتابعة",
+    "signupDescription": "أنشئ حسابًا جديدًا للبدء",
+    "fillAllFields": "يرجى ملء جميع الحقول",
+    "loginSuccess": "تم تسجيل الدخول بنجاح",
+    "signupSuccess": "تم إنشاء الحساب",
+    "welcomeBack": "مرحبًا بعودتك!",
+    "accountCreated": "تم إنشاء حسابك بنجاح",
+    "loggedOut": "تم تسجيل الخروج",
+    "loggedOutSuccess": "تم تسجيل خروجك بنجاح"
+  },
+  "categories": {
+    "tv": "التلفزيون والفيديو",
+    "pc": "أجهزة الكمبيوتر",
+    "laptops": "أجهزة الكمبيوتر المحمولة",
+    "mobile": "الهواتف المحمولة",
+    "audio": "الصوت وسماعات الرأس",
+    "accessories": "الإكسسوارات",
+    "gaming": "الألعاب"
+  },
+  "product": {
+    "price": "السعر",
+    "brand": "العلامة التجارية",
+    "condition": "الحالة",
+    "location": "الموقع",
+    "seller": "البائع",
+    "description": "الوصف",
+    "specifications": "المواصفات",
+    "priceHistory": "تاريخ الأسعار",
+    "availability": "التوفر",
+    "viewOnSite": "عرض على {{site}}",
+    "comparePrice": "مقارنة السعر",
+    "new": "جديد",
+    "used": "مستعمل",
+    "available": "متوفر",
+    "outOfStock": "نفدت الكمية"
+  },
+  "search": {
+    "results": "نتائج البحث",
+    "noResults": "لم يتم العثور على منتجات",
+    "filters": "المرشحات",
+    "minPrice": "أقل سعر",
+    "maxPrice": "أعلى سعر",
+    "city": "المدينة",
+    "category": "الفئة",
+    "applyFilters": "تطبيق المرشحات",
+    "clearFilters": "مسح المرشحات",
+    "sortBy": "ترتيب حسب",
+    "sortPriceLow": "السعر: من الأقل إلى الأعلى",
+    "sortPriceHigh": "السعر: من الأعلى إلى الأقل",
+    "sortNewest": "الأحدث أولاً"
+  },
+  "admin": {
+    "dashboard": "لوحة تحكم الإدارة",
+    "triggerScraping": "تشغيل عملية الجمع",
+    "manageProducts": "إدارة المنتجات",
+    "viewStats": "عرض الإحصائيات",
+    "scrapingStarted": "بدأت عملية جمع البيانات",
+    "lastUpdate": "آخر تحديث"
+  },
+  "common": {
+    "loading": "جار التحميل...",
+    "error": "خطأ",
+    "retry": "إعادة المحاولة",
+    "back": "العودة",
+    "next": "التالي",
+    "previous": "السابق",
+    "close": "إغلاق",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "darkMode": "الوضع المظلم",
+    "lightMode": "الوضع المضيء"
+  },
+  "cities": {
+    "casablanca": "الدار البيضاء",
+    "rabat": "الرباط",
+    "marrakech": "مراكش",
+    "fes": "فاس",
+    "tangier": "طنجة",
+    "agadir": "أكادير",
+    "meknes": "مكناس",
+    "oujda": "وجدة",
+    "kenitra": "القنيطرة",
+    "tetouan": "تطوان"
+  },
+  "footer": {
+    "contact": "معلومات الاتصال",
+    "followUs": "تابعنا",
+    "about": "حول ElectroCompare",
+    "address": "الدار البيضاء، المغرب",
+    "description": "نقارن أسعار أفضل متاجر الإلكترونيات المغربية لمساعدتك في العثور على أفضل العروض.",
+    "copyright": "© {{year}} ElectroCompare. جميع الحقوق محفوظة.",
+    "privacy": "نحن نقدر خصوصيتك ونضمن تصفحاً آمناً."
+  },
+  "favorites": {
+    "title": "مفضلاتي",
+    "empty": "لم تقم بإضافة أي منتجات إلى مفضلاتك بعد.",
+    "startShopping": "ابدأ التسوق",
+    "count": "{{count}} عنصر"
+  },
+  "reviews": {
+    "title": "تقييمات المستخدمين",
+    "submitReview": "إرسال التقييم",
+    "writeReview": "اكتب تقييمك",
+    "rating": "التقييم",
+    "comment": "التعليق",
+    "commentPlaceholder": "شاركنا رأيك في المنصة...",
+    "requireAuth": "باش تعطي تقييم خاصك تسجل",
+    "loginToReview": "تسجيل الدخول",
+    "signupToReview": "إنشاء حساب",
+    "reviewSubmitted": "تم إرسال التقييم",
+    "reviewThankYou": "شكراً لك على تقييمك!",
+    "demoRate": "إضافة تقييم تجريبي",
+    "submitting": "جار الإرسال...",
+    "noReviews": "لا توجد تقييمات بعد",
+    "beFirst": "كن أول من يقيّم المنصة!"
+  }
+}

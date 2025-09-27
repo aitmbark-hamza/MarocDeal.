@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Electronics marketplace color scheme */
+    --background: 0 0% 100%;
+    --foreground: 222 13% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 13% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 13% 11%;
+
+    /* Modern blue primary inspired by tech brands */
+    --primary: 217 76% 51%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 76% 45%;
+
+    /* Subtle secondary colors */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 13% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 13% 11%;
+
+    /* Status colors */
+    --destructive: 0 73% 57%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 76% 51%;
+
+    /* Cool white search input design */
+    --search-input: 0 0% 100%;
+    --search-border: 210 20% 90%;
+    --search-shadow: 0 4px 20px -4px hsl(217 76% 51% / 0.1);
+    --search-shadow-focus: 0 8px 30px -6px hsl(217 76% 51% / 0.2);
+    --search-backdrop: 0 0% 100% / 0.8;
+
+    --radius: 0.75rem;
+
+    /* Gradients for modern look */
+    --gradient-primary: linear-gradient(135deg, hsl(217 76% 51%), hsl(224 76% 48%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 76% 51%), hsl(250 84% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Shadows for depth */
+    --shadow-card: 0 4px 12px -2px hsl(217 76% 51% / 0.08);
+    --shadow-hover: 0 8px 25px -2px hsl(217 76% 51% / 0.15);
+    --shadow-featured: 0 20px 40px -12px hsl(217 76% 51% / 0.25);
+
+    /* Sidebar variables */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 76% 51%;
+  }
+
+  .dark {
+    /* Dark mode electronics theme */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Brighter primary for dark mode */
+    --primary: 217 76% 60%;
+    --primary-foreground: 222 84% 5%;
+    --primary-hover: 217 76% 65%;
+
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Status colors for dark mode */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --success: 142 72% 35%;
+    --success-foreground: 210 40% 98%;
+    
+    --warning: 38 92% 45%;
+    --warning-foreground: 222 84% 5%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 217 76% 60%;
+
+    /* Cool search input for dark mode */
+    --search-input: 217 33% 15%;
+    --search-border: 217 33% 25%;
+    --search-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --search-shadow-focus: 0 8px 30px -6px hsl(217 76% 60% / 0.3);
+    --search-backdrop: 217 33% 15% / 0.9;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 76% 60%), hsl(224 76% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 76% 60%), hsl(250 84% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(222 84% 5%), hsl(217 33% 8%));
+    
+    /* Dark shadows */
+    --shadow-card: 0 4px 12px -2px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 8px 25px -2px hsl(0 0% 0% / 0.4);
+    --shadow-featured: 0 20px 40px -12px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 76% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
