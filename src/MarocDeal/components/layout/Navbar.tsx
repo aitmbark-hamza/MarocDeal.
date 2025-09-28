@@ -170,18 +170,19 @@ const Navbar = () => {
 
   return (
     <nav className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border sticky top-0 z-50 shadow-card">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 group transition-all duration-200 hover:scale-105" aria-label="TechMorocco Home">
-              <img src="/logo.png" alt="MarocDeals Logo" className="w-8 h-8 rounded-lg shadow-card group-hover:shadow-hover transition-all duration-200" />
-              <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">MarocDeals</span>
+            <Link to="/" className="flex items-center space-x-2 group transition-all duration-200 hover:scale-105" aria-label="MarocDeals Home">
+              <img src="/logo.png" alt="MarocDeals Logo" className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg shadow-card group-hover:shadow-hover transition-all duration-200" />
+              <span className="text-lg sm:text-xl font-bold bg-gradient-primary bg-clip-text text-transparent hidden xs:inline">MarocDeals</span>
+              <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent xs:hidden">MarocDeals</span>
             </Link>
           </div>
 
           {/* Center Section - Search Bar & Categories */}
-          <div className="hidden md:flex items-center flex-1 max-w-2xl mx-8">
+          <div className="hidden lg:flex items-center flex-1 max-w-2xl mx-4 xl:mx-8">
             <div className="relative flex-1 max-w-lg">
               <form onSubmit={handleSearchSubmit}>
                 <div className="relative">
@@ -249,7 +250,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Controls */}
-          <div className="hidden md:flex items-center space-x-2 flex-shrink-0">
+          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 flex-shrink-0">
             <div className="flex items-center space-x-1 mr-4">
               {navigation.map((item) => (
                 <Link key={item.name} to={item.href}>
@@ -304,22 +305,116 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Controls */}
-          <div className="md:hidden flex items-center space-x-2">
-            <Button variant="ghost" size="sm" onClick={() => navigate('/search')} className="transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-ring focus:ring-offset-2" aria-label="Search">
+          <div className="flex lg:hidden items-center space-x-1 sm:space-x-2">
+            {/* Mobile Search */}
+            <Button variant="ghost" size="sm" onClick={() => navigate('/search')} className="p-2 transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-ring focus:ring-offset-2" aria-label="Search">
               <Search className="w-4 h-4" />
             </Button>
 
+            {/* Mobile Favorites */}
             <Link to="/favorites">
-              <Button variant="ghost" size="sm" className="relative transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-ring focus:ring-offset-2" aria-label={`Favorites ${favoritesCount > 0 ? `(${favoritesCount})` : ''}`}>
+              <Button variant="ghost" size="sm" className="relative p-2 transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-ring focus:ring-offset-2" aria-label={`Favorites ${favoritesCount > 0 ? `(${favoritesCount})` : ''}`}>
                 <Heart className="w-4 h-4" />
-                {isAuthenticated && <span className="ml-2 text-xs font-medium text-muted-foreground">{localStorage.getItem('username') || localStorage.getItem('userEmail')}</span>}
                 {favoritesCount > 0 && <Badge variant="destructive" className="absolute -top-1 -right-1 h-4 w-4 p-0 flex items-center justify-center text-xs min-w-4 rounded-full">{favoritesCount}</Badge>}
               </Button>
             </Link>
 
-            <Button variant="ghost" size="sm" onClick={toggleMobileMenu} className="transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-ring focus:ring-offset-2" aria-label={isOpen ? 'Close menu' : 'Open menu'} aria-expanded={isOpen} aria-controls="mobile-menu">
+            {/* Mobile User/Auth */}
+            {isAuthenticated ? (
+              <Button variant="ghost" size="sm" className="p-2" onClick={() => navigate('/profile')} aria-label="Profile">
+                <User className="w-4 h-4" />
+              </Button>
+            ) : (
+              <Button variant="ghost" size="sm" className="p-2" onClick={() => navigate('/login')} aria-label="Login">
+                <User className="w-4 h-4" />
+              </Button>
+            )}
+
+            {/* Mobile Menu Toggle */}
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={toggleMobileMenu} 
+              className="p-2 transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-ring focus:ring-offset-2" 
+              aria-label={isOpen ? 'Close menu' : 'Open menu'} 
+              aria-expanded={isOpen} 
+              aria-controls="mobile-menu"
+            >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>
+          </div>
+
+          {/* Tablet Controls (md to lg) */}
+          <div className="hidden md:flex lg:hidden items-center space-x-2 flex-shrink-0">
+            {/* Tablet Search */}
+            <div className="relative flex-1 max-w-xs">
+              <form onSubmit={handleSearchSubmit}>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary w-4 h-4 pointer-events-none" />
+                  <Input
+                    variant="search"
+                    type="text"
+                    placeholder={t('search.placeholder')}
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    onKeyDown={handleSearchKeyDown}
+                    className="pl-10 h-9 text-sm"
+                    onFocus={() => { navigate('/search'); if (searchQuery) setShowResults(true); }}
+                    onBlur={() => { setTimeout(() => setShowResults(false), 200); }}
+                    aria-label="Search products"
+                  />
+                </div>
+              </form>
+            </div>
+
+            {/* Tablet Navigation */}
+            <div className="flex items-center space-x-1">
+              {navigation.map((item) => (
+                <Link key={item.name} to={item.href}>
+                  <Button variant={location.pathname === item.href ? "default" : "ghost"} size="sm" className="flex items-center gap-1 p-2" aria-current={location.pathname === item.href ? 'page' : undefined}>
+                    {item.href === '/favorites' ? (
+                      <div className="relative">
+                        <item.icon className="w-4 h-4" />
+                        {favoritesCount > 0 && <Badge variant="destructive" className="absolute -top-1 -right-1 h-3 w-3 p-0 flex items-center justify-center text-xs min-w-3 rounded-full">{favoritesCount}</Badge>}
+                      </div>
+                    ) : <item.icon className="w-4 h-4" />}
+                  </Button>
+                </Link>
+              ))}
+            </div>
+
+            {/* Tablet Controls */}
+            <div className="flex items-center space-x-1">
+              <Button variant="ghost" size="sm" onClick={toggleTheme} className="p-2" aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}>
+                {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+              </Button>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="p-2" aria-label="Select language">
+                    <Globe className="w-4 h-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="shadow-hover">
+                  {languages.map((lang) => (
+                    <DropdownMenuItem key={lang.code} onClick={() => changeLanguage(lang.code)} className="flex items-center space-x-2">
+                      <span aria-hidden="true">{lang.flag}</span>
+                      <span>{lang.name}</span>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {!isAuthenticated ? (
+                <Button variant="ghost" size="sm" onClick={() => navigate('/login')} className="flex items-center gap-1 p-2">
+                  <User className="w-4 h-4" />
+                </Button>
+              ) : (
+                <Button variant="ghost" size="sm" className="flex items-center gap-1 p-2 max-w-24 truncate" title={localStorage.getItem('username') || localStorage.getItem('userEmail') || ''} onClick={() => navigate('/profile')}>
+                  <User className="w-4 h-4 flex-shrink-0" />
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -327,24 +422,58 @@ const Navbar = () => {
       {/* Mobile slide-over menu */}
       {isOpen && (
         <>
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden animate-in fade-in duration-200" onClick={() => setIsOpen(false)} aria-hidden="true" />
-          <div ref={mobileMenuRef} id="mobile-menu" className="fixed inset-y-0 right-0 w-full max-w-sm bg-background border-l border-border shadow-featured z-50 md:hidden animate-in slide-in-from-right duration-300" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden animate-in fade-in duration-200" onClick={() => setIsOpen(false)} aria-hidden="true" />
+          <div ref={mobileMenuRef} id="mobile-menu" className="fixed inset-y-0 right-0 w-full max-w-xs sm:max-w-sm bg-background border-l border-border shadow-featured z-50 lg:hidden animate-in slide-in-from-right duration-300" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
             <div className="flex flex-col h-full overflow-y-auto">
               {/* Header */}
-              <div className="flex items-center justify-between p-4 border-b border-border">
+              <div className="flex items-center justify-between p-3 sm:p-4 border-b border-border">
                 <div className="flex items-center space-x-2">
                   <div className="w-6 h-6 bg-gradient-primary rounded-lg flex items-center justify-center">
                     <Smartphone className="w-4 h-4 text-white" />
                   </div>
-                  <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">TechMorocco</span>
+                  <span className="text-base sm:text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">MarocDeals</span>
                 </div>
-                <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)} className="transition-all duration-200" aria-label="Close menu">
+                <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)} className="p-2 transition-all duration-200" aria-label="Close menu">
                   <X className="w-5 h-5" />
                 </Button>
               </div>
 
               {/* Navigation Links */}
-              <div className="flex-1 px-4 py-6 space-y-4">
+              <div className="flex-1 px-3 sm:px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
+                {/* Mobile Search */}
+                <div className="mb-4">
+                  <form onSubmit={handleSearchSubmit}>
+                    <div className="relative">
+                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary w-4 h-4 pointer-events-none" />
+                      <Input
+                        variant="search"
+                        type="text"
+                        placeholder={t('search.placeholder')}
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                        onKeyDown={handleSearchKeyDown}
+                        className="pl-10 h-10"
+                        onFocus={() => { navigate('/search'); if (searchQuery) setShowResults(true); }}
+                        onBlur={() => { setTimeout(() => setShowResults(false), 200); }}
+                        aria-label="Search products"
+                      />
+                    </div>
+                  </form>
+                </div>
+
+                {/* Categories */}
+                <div className="mb-4">
+                  <h3 className="text-sm font-semibold text-muted-foreground mb-3 px-3">{t('nav.categories')}</h3>
+                  <div className="space-y-1">
+                    {selectedCategories.map((category) => (
+                      <Link key={category.id} to={`/categories/${category.id}`} className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200" onClick={() => setIsOpen(false)}>
+                        {t(`categories.${category.id}`)}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Navigation Links */}
                 {navigation.map((item) => (
                   <Link key={item.name} to={item.href} className={`flex items-center px-3 py-3 rounded-lg text-base font-medium transition-all duration-200 ${location.pathname === item.href ? 'bg-primary text-primary-foreground shadow-card' : 'text-foreground hover:bg-accent hover:text-accent-foreground'}`} onClick={() => setIsOpen(false)} aria-current={location.pathname === item.href ? 'page' : undefined}>
                     {item.href === '/favorites' ? (
@@ -356,31 +485,58 @@ const Navbar = () => {
                     {item.name}
                   </Link>
                 ))}
+
+                {/* Auth Section */}
+                {!isAuthenticated ? (
+                  <Link to="/login" className="flex items-center px-3 py-3 rounded-lg text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200" onClick={() => setIsOpen(false)}>
+                    <User className="w-5 h-5 mr-3" />
+                    {t('auth.login')}
+                  </Link>
+                ) : (
+                  <Link to="/profile" className="flex items-center px-3 py-3 rounded-lg text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200" onClick={() => setIsOpen(false)}>
+                    <User className="w-5 h-5 mr-3" />
+                    <span className="truncate">{localStorage.getItem('username') || localStorage.getItem('userEmail')}</span>
+                  </Link>
+                )}
               </div>
 
               {/* Footer */}
-              <div className="px-4 py-6 border-t border-border space-y-4">
-                <Button variant="outline" size="sm" onClick={toggleTheme} className="w-full flex justify-center gap-2">
+              <div className="px-3 sm:px-4 py-4 sm:py-6 border-t border-border space-y-3 sm:space-y-4">
+                {/* Theme Toggle */}
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={() => {
+                    toggleTheme();
+                    setIsOpen(false);
+                  }} 
+                  className="w-full flex justify-center gap-2 h-10"
+                >
                   {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
-                  {theme === 'light' ? t('nav.dark_mode') : t('nav.light_mode')}
+                  <span className="text-sm">{theme === 'light' ? t('nav.dark_mode') : t('nav.light_mode')}</span>
                 </Button>
 
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm" className="w-full flex justify-center gap-2">
-                      <Globe className="w-4 h-4" />
-                      {languages.find(lang => lang.code === i18n.language)?.flag || '🌍'}
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="center">
+                {/* Language Selector */}
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-muted-foreground px-2">{t('nav.language')}</h4>
+                  <div className="grid grid-cols-1 gap-2">
                     {languages.map((lang) => (
-                      <DropdownMenuItem key={lang.code} onClick={() => changeLanguage(lang.code)} className="flex items-center space-x-2">
+                      <Button
+                        key={lang.code}
+                        variant={i18n.language === lang.code ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => {
+                          changeLanguage(lang.code);
+                          setIsOpen(false);
+                        }}
+                        className="w-full flex justify-start gap-2 h-10"
+                      >
                         <span aria-hidden="true">{lang.flag}</span>
-                        <span>{lang.name}</span>
-                      </DropdownMenuItem>
+                        <span className="text-sm">{lang.name}</span>
+                      </Button>
                     ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

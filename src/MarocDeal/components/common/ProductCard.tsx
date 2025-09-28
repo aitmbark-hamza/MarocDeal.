@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Heart, MapPin, Eye, ExternalLink } from 'lucide-react';
+import { Heart, Eye, ExternalLink } from 'lucide-react';
 import { Product } from '@/data/mockData';
 import { useFavorites } from '@/contexts/FavoritesContext';
 
@@ -103,16 +103,11 @@ const ProductCard = ({ product, featured = false }: ProductCardProps) => {
           </div>
         </div>
 
-        {/* Condition and Location */}
-        <div className="flex items-center justify-between mb-3">
+        {/* Condition */}
+        <div className="flex items-center justify-start mb-3">
           <Badge className={getConditionColor(product.condition)}>
             {t(`product.${product.condition}`)}
           </Badge>
-          
-          <div className="flex items-center text-xs text-muted-foreground">
-            <MapPin className="w-3 h-3 mr-1" />
-            {t(`cities.${product.location.city}`)}
-          </div>
         </div>
 
       

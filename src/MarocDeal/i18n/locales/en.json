@@ -5,7 +5,9 @@
     "search": "Search",
     "favorites": "Favorites",
     "admin": "Admin",
-    "language": "Language"
+    "language": "Language",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode"
   },
   "home": {
     "title": "Find the Best Electronics Deals in Morocco",

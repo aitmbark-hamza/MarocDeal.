@@ -172,14 +172,19 @@ const ProductDetails = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t('product.viewOnSite', { site: product.source })}
+                    className="flex items-center justify-center gap-2 rtl:flex-row-reverse"
                   >
-                    <ShoppingCart className="w-5 h-5 mr-2" />
-                    {t('product.viewOnSite', { site: product.source })}
+                    <ShoppingCart className="w-5 h-5 flex-shrink-0" />
+                    <span className="font-medium button-text">
+                      {t('product.viewOnSite', { site: product.source })}
+                    </span>
                   </a>
                 </Button>
-                <Button variant="outline" className="w-full">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Compare Prices
+                <Button variant="outline" className="w-full" asChild>
+                  <div className="flex items-center justify-center gap-2 rtl:flex-row-reverse cursor-pointer">
+                    <ExternalLink className="w-4 h-4 flex-shrink-0" />
+                    <span className="button-text">{t('product.comparePrice')}</span>
+                  </div>
                 </Button>
               </div>
             </div>

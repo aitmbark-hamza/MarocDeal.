@@ -11,10 +11,10 @@ const Footer = () => {
         {/* Brand Section */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+            <div className="img src=/logo.png">
               <ShoppingBag className="w-5 h-5 text-white" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground">MarocDeals</h2>
+            <h2 className="text-2xl font-bold text-foreground">MarocDeal</h2>
           </div>
           <p className="text-muted-foreground max-w-md mx-auto">
             {t('footer.description')}

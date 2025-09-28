@@ -42,7 +42,7 @@ const Home = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const featuredProducts = mockProducts.slice(0, 8);
+  const featuredProducts = mockProducts.slice(0, 16);
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUserName, setCurrentUserName] = useState('');
@@ -91,7 +91,7 @@ const Home = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
             {featuredProducts.map(product => (
               <ProductCard key={product.id} product={product} featured={true} />
             ))}
