@@ -175,7 +175,17 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2 group transition-all duration-200 hover:scale-105" aria-label="MarocDeals Home">
-              <img src="/logo.png" alt="MarocDeals Logo" className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg shadow-card group-hover:shadow-hover transition-all duration-200" />
+              <img 
+                src="/logo.png" 
+                alt="MarocDeals Logo" 
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg shadow-card group-hover:shadow-hover transition-all duration-200" 
+                loading="eager"
+                decoding="async"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
+              />
               <span className="text-lg sm:text-xl font-bold bg-gradient-primary bg-clip-text text-transparent hidden xs:inline">MarocDeals</span>
               <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent xs:hidden">MarocDeals</span>
             </Link>

@@ -35,11 +35,17 @@ const ProductCard = ({ product, featured = false }: ProductCardProps) => {
     }`}>
       <div className="relative">
         {/* Product Image */}
-        <div className="aspect-square overflow-hidden">
+        <div className="aspect-square overflow-hidden bg-muted">
           <img
             src={product.images[0]}
             alt={product.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+            decoding="async"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik04NyA3NEg5M1Y4MEg4N1Y3NFoiIGZpbGw9IiM5Q0EzQUYiLz4KPHA+dGggZD0iTTc0IDkzSDEyNlY5OUg3NFY5M1oiIGZpbGw9IiM5Q0EzQUYiLz4KPHA+dGggZD0iTTc0IDEwNkgxMDZWMTEySDc0VjEwNloiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+';
+            }}
           />
         </div>
 
@@ -120,8 +126,8 @@ const ProductCard = ({ product, featured = false }: ProductCardProps) => {
             variant={featured ? "hero" : "default"}
             asChild
           >
-            <Link to={`/product/${product.id}`}>
-              {t('View Details')}
+            <Link to={`/product/${product.id}`} className="flex items-center justify-center gap-2">
+              <span className="button-text">{t('product.viewDetails')}</span>
             </Link>
           </Button>
           
@@ -136,9 +142,10 @@ const ProductCard = ({ product, featured = false }: ProductCardProps) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t('product.viewOnSite', { site: product.source })}
+              className="flex items-center justify-center gap-2 rtl:flex-row-reverse"
             >
-              <ExternalLink className="w-3 h-3 mr-2" />
-              {t('product.viewOnSite', { site: product.source })}
+              <ExternalLink className="w-3 h-3 flex-shrink-0" />
+              <span className="button-text">{t('product.viewOnSite', { site: product.source })}</span>
             </a>
           </Button>
         </div>
