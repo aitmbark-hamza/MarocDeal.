@@ -16,6 +16,7 @@ import Signup from "./pages/Signup";
 import Favorites from "./pages/Favorites";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
+import ScrollToTop from "@/components/common/ScrollToTop";
 import "./i18n";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <div className="min-h-screen bg-background flex flex-col" data-lov-id="src/App.tsx:28:10">
               <Navbar />
               <main className="flex-1">
