@@ -160,7 +160,13 @@
     "title": "Mes Favoris",
     "empty": "Vous n'avez pas encore ajouté de produits à vos favoris.",
     "startShopping": "Commencer les Achats",
-    "count": "{{count}} articles"
+    "count": "{{count}} articles",
+    "loginRequired": "Inscription Requise",
+    "loginRequiredDesc": "Vous devez vous inscrire pour ajouter des articles à vos favoris. Redirection immédiate.",
+    "added": "Ajouté aux Favoris",
+    "addedDesc": "L'article a été ajouté à vos favoris.",
+    "removed": "Retiré des Favoris",
+    "removedDesc": "L'article a été retiré de vos favoris."
   },
   "reviews": {
     "title": "Avis des Utilisateurs",

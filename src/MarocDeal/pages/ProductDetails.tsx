@@ -183,7 +183,7 @@ const ProductDetails = () => {
                 <Button variant="outline" className="w-full" asChild>
                   <div className="flex items-center justify-center gap-2 rtl:flex-row-reverse cursor-pointer">
                     <ExternalLink className="w-4 h-4 flex-shrink-0" />
-                    <span className="button-text">{t('product.comparePrice')}</span>
+                    <span>{t('product.comparePrice')}</span>
                   </div>
                 </Button>
               </div>

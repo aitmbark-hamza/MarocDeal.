@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { useTranslation } from 'react-i18next';
 
 interface FavoritesContextType {
   favorites: string[];
@@ -17,6 +18,7 @@ interface FavoritesProviderProps {
 export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({ children }) => {
   const [favorites, setFavorites] = useState<string[]>([]);
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   // Load user-specific favorites
   useEffect(() => {
@@ -52,10 +54,13 @@ export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({ children }
   const toggleFavorite = (productId: string) => {
     if (!isAuthenticated()) {
       toast({
-        title: 'Login Required',
-        description: 'Please log in to add items to your favorites.',
+        title: t('favorites.loginRequired'),
+        description: t('favorites.loginRequiredDesc'),
         variant: 'destructive'
       });
+      
+      // Redirect to login page immediately
+      window.location.href = '/login';
       return;
     }
 
@@ -75,10 +80,10 @@ export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({ children }
     // Show feedback
     const isAdding = !favorites.includes(productId);
     toast({
-      title: isAdding ? 'Added to Favorites' : 'Removed from Favorites',
+      title: isAdding ? t('favorites.added') : t('favorites.removed'),
       description: isAdding 
-        ? 'Item has been added to your favorites.' 
-        : 'Item has been removed from your favorites.',
+        ? t('favorites.addedDesc')
+        : t('favorites.removedDesc'),
     });
   };
 

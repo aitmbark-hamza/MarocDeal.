@@ -187,7 +187,13 @@
     "title": "My Favorites",
     "empty": "You haven't added any products to your favorites yet.",
     "startShopping": "Start Shopping",
-    "count": "{{count}} items"
+    "count": "{{count}} items",
+    "loginRequired": "Sign Up Required",
+    "loginRequiredDesc": "You must sign up to add items to your favorites. Redirecting to login now.",
+    "added": "Added to Favorites",
+    "addedDesc": "Item has been added to your favorites.",
+    "removed": "Removed from Favorites",
+    "removedDesc": "Item has been removed from your favorites."
   },
   "reviews": {
     "title": "User Reviews",
