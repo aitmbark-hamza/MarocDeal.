@@ -145,29 +145,7 @@ const Search = () => {
                   </Select>
                 </div>
 
-                {/* City Filter */}
-                <div>
-                  <label className="text-sm font-medium mb-2 block">
-                    {t('search.city')}
-                  </label>
-                  <Select 
-                    value={filters.city === '' ? 'all' : filters.city} 
-                    onValueChange={(value) => handleFilterChange('city', value === 'all' ? '' : value)}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="All cities" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">All cities</SelectItem>
-                      {cities.map((city) => (
-                        <SelectItem key={city} value={city}>
-                          {t(`cities.${city}`)}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
+               
                 {/* Price Range */}
                 <div>
                   <label className="text-sm font-medium mb-2 block">Price Range</label>
